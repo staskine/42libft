@@ -6,7 +6,7 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:56:54 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/03 14:17:05 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/03 13:15:07 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ char	*ft_strdup(const char *src)
 	int		index;
 
 	len = ft_strlen(src);
+	index = 0;
 	dest = (char *)malloc(sizeof(char) * (len + 1));
 	if (!dest)
 		return (0);

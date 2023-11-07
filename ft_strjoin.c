@@ -1,38 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 16:09:23 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/03 16:54:46 by sataskin         ###   ########.fr       */
+/*   Created: 2023/11/03 14:51:08 by sataskin          #+#    #+#             */
+/*   Updated: 2023/11/03 16:54:49 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *hs, const char *nd, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
+	unsigned int	len;
+	char			*dest;
+	unsigned int	i_s;
+	unsigned int	i_dest;
 
-	i = 0;
-	j = 0;
-	if (!hs && len == 0)
+	len = ft_strlen(s1) + ft_strlen(s2);
+	dest = (char *)malloc(sizeof(char) * (len + 1));
+	i_s = 0;
+	i_dest = 0;
+	if (!dest)
 		return (NULL);
-	if (nd[j] == '\0')
-		return ((char *)hs);
-	while (hs[i] != '\0' && len > i)
+	while (s1[i_dest] != '\0')
 	{
-		while (nd[j] == hs[i + j] && hs[i + j] != '\0' && (j + i) < len)
-		{
-			j++;
-			if (nd[j] == '\0')
-				return ((char *)&hs[i]);
-		}
-		i++;
-		j = 0;
+		dest[i_dest] = s1[i_dest];
+		i_dest++;
 	}
-	return (NULL);
+	while (s2[i_s] != '\0')
+	{
+		dest[i_dest] = s2[i_s];
+		i_dest++;
+		i_s++;
+	}
+	dest[i_dest] = '\0';
+	return (dest);
 }
