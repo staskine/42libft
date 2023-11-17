@@ -6,11 +6,13 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:56:54 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/03 13:15:07 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:42:03 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* Makes a duplicate of string src and returns it */
 
 char	*ft_strdup(const char *src)
 {

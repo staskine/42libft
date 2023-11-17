@@ -6,11 +6,13 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:26:47 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/03 14:20:54 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:43:56 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* This function copies the real strlcat behaviour */
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {

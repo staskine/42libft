@@ -6,11 +6,13 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 14:51:08 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/03 16:54:49 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:43:23 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* This function joins two strings s1 and s2 and creates a new string */
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

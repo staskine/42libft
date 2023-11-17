@@ -6,11 +6,15 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:02:30 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/10 10:55:42 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:40:19 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* This is a function that splits a string into an array of strings based on
+the delimiter char c Ths first function finds the amount of strings that are
+going to be made */
 
 static size_t	ft_wordcount(char const *str, char c)
 {
@@ -38,6 +42,8 @@ static size_t	ft_wordcount(char const *str, char c)
 	return (num);
 }
 
+/*Finds the length of each string for memory allocation */
+
 static size_t	ft_wordlength(const char *str, size_t i, char c)
 {
 	size_t	len;
@@ -50,6 +56,8 @@ static size_t	ft_wordlength(const char *str, size_t i, char c)
 	}
 	return (len);
 }
+
+/*Frees each string and the array in case of an error */
 
 static void	*ft_freearray(char **array, size_t j)
 {
@@ -64,6 +72,8 @@ static void	*ft_freearray(char **array, size_t j)
 	free(array);
 	return (NULL);
 }
+
+/*Makes a copy of the new string */
 
 static char	*ft_strnewcpy(const char *src, char *des, size_t i, size_t length)
 {
@@ -80,6 +90,9 @@ static char	*ft_strnewcpy(const char *src, char *des, size_t i, size_t length)
 	des[dest] = '\0';
 	return (des);
 }
+
+
+/* Main function */
 
 char	**ft_split(char const *s, char c)
 {
