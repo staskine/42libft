@@ -6,11 +6,14 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 17:09:01 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/14 17:17:01 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:55:31 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* Clears a linked list with function that deletes all the content in a node.
+Then we free the nodes */
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

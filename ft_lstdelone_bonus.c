@@ -6,12 +6,14 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:31:46 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/14 17:16:53 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:56:21 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Deletes all the content from one node of the inputted linked list
+and then frees the node */
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (*del)

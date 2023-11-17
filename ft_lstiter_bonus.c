@@ -6,11 +6,13 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 17:20:42 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/14 17:30:29 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:57:48 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*This function aaplies a function to every node of a linked list */
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

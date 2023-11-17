@@ -6,11 +6,14 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 17:30:39 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/15 14:22:54 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:59:46 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* Applies a function to every nodes' content of a linked list and if
+unsuccessful deletes everything and frees the nodes. */
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
