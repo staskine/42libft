@@ -6,11 +6,14 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:40:55 by sataskin          #+#    #+#             */
-/*   Updated: 2023/10/31 17:24:19 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:37:19 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* This function compares strings s1 and s2 till size n and returns their
+difference or 0 if their identical till n */
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

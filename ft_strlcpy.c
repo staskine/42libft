@@ -6,11 +6,14 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:25:40 by sataskin          #+#    #+#             */
-/*   Updated: 2023/10/30 17:19:34 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:31:47 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* Copies str src to string dest to iteration size. It then null 
+terminates it */
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

@@ -6,11 +6,15 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:09:23 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/03 16:54:46 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:39:12 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* This function finds the needle in the haystack so to speak. It finds out if 
+string nd is present in string hs. It looks till index len for hs. It then 
+either returns the location on string hs or null if not found */
 
 char	*ft_strnstr(const char *hs, const char *nd, size_t len)
 {

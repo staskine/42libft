@@ -6,11 +6,14 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:52:10 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/07 13:00:51 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:36:18 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* Makes a new string based on the function f being applied to string s
+abnd returns it. This preserves the original string */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -24,7 +27,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	while (s[i] != '\0')
 	{
 		str[i] = s[i];
-		str[i] = f(i, s[i]);
+		str[i] = f(i, str[i]);
 		i++;
 	}
 	str[i] = '\0';
