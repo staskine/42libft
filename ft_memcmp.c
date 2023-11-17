@@ -6,11 +6,15 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:07:55 by sataskin          #+#    #+#             */
-/*   Updated: 2023/10/31 13:33:14 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:07:52 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*Compared s1 and s2 and returns the difference of the first tw o chars
+that are different in the two strings. If identical it will
+return a 0 */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

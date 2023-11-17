@@ -6,13 +6,14 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 10:14:50 by sataskin          #+#    #+#             */
-/*   Updated: 2023/10/30 17:19:29 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:11:33 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
+/* This function does the same thing as memcpy but it handles memory overlap
+by copying from back to front */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*c_dest;

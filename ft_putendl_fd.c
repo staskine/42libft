@@ -6,12 +6,15 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:38:11 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/07 13:39:15 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:22:26 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Writes to file found from file descriptor fd. It adds the char c and
+ a new line */
+ 
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
