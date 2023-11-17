@@ -6,7 +6,7 @@
 #    By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 11:36:21 by sataskin          #+#    #+#              #
-#    Updated: 2023/11/07 13:37:45 by sataskin         ###   ########.fr        #
+#    Updated: 2023/11/17 11:53:21 by sataskin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,15 @@ SOURCE = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c\
 		ft_memchr.c ft_memcmp.c ft_strncmp.c ft_atoi.c ft_strnstr.c\
 		ft_strlcat.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c\
 		ft_strtrim.c ft_striteri.c ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c\
-		ft_putendl_fd.c
+		ft_putendl_fd.c ft_putnbr_fd.c ft_itoa.c ft_split.c
 		
 OBJECT = $(SOURCE:.c=.o)
+
+BONUS_S = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c\
+		ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c\
+		ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+
+BONUS_O = $(BONUS_S:.c=.o)
 
 HEADERS = ./
 
@@ -29,18 +35,25 @@ all: $(NAME)
 $(NAME): $(OBJECT)
 	ar -rcs $(NAME) $(OBJECT)
 
+bonus: .bonus
+
+.bonus: $(OBJECT) $(BONUS_O)
+	ar -rcs $(NAME) $(BONUS_O)
+	touch .bonus
+
 %.o: %.c
 	cc -Wall -Wextra -Werror -c $< -o $(<:.c=.o)
 
 clean:
-	rm -f $(OBJECT)
+	rm -f $(OBJECT) $(BONUS_O)
+	rm -f .bonus
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re test run mistakes remove 
+.PHONY: all clean fclean re test run mistakes remove bonus
 
 #For tests. Copy onto another makefile along with test files
 test:

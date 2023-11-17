@@ -6,9 +6,12 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 14:15:48 by sataskin          #+#    #+#             */
-/*   Updated: 2023/10/30 17:19:16 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:55:45 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* This function checks if c is a letter. If this is the case
+it returns 1 */
 
 int	ft_isalpha(int c)
 {

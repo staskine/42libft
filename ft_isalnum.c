@@ -6,11 +6,14 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:34:23 by sataskin          #+#    #+#             */
-/*   Updated: 2023/10/30 17:19:14 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:55:31 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* This function checks if the value in this case is either a letter or
+a number. If this is the case it returns 1 */
 
 int	ft_isalnum(int value)
 {

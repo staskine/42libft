@@ -6,11 +6,13 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:02:06 by sataskin          #+#    #+#             */
-/*   Updated: 2023/10/30 17:19:12 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:54:19 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* It creates a string of size n and fills it with zeros */
 
 void	*ft_bzero(void *s, size_t n)
 {

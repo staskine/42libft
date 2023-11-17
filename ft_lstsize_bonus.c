@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 14:47:47 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/17 11:54:32 by sataskin         ###   ########.fr       */
+/*   Created: 2023/11/14 15:12:21 by sataskin          #+#    #+#             */
+/*   Updated: 2023/11/14 16:05:55 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* This functions allocates a specified amount of memory and initializes
-it to zero using ft_bzero. by doing this the user can cast a specified types
-space. size can be sizeof(char), etc. */
-
-void	*ft_calloc(size_t nmemb, size_t size)
+int	ft_lstsize(t_list *lst)
 {
-	void	*str;
+	int	len;
 
-	str = malloc(nmemb * size);
-	if (!str)
+	len = 1;
+	if (!lst)
 		return (0);
-	str = ft_bzero(str, nmemb * size);
-	return (str);
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
+		len++;
+	}
+	return (len);
 }

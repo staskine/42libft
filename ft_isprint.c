@@ -6,9 +6,11 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 12:55:21 by sataskin          #+#    #+#             */
-/*   Updated: 2023/10/30 17:19:23 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:56:33 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* This function checks whether c is a printable character */
 
 int	ft_isprint(int c)
 {

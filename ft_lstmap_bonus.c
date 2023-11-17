@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 14:47:47 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/17 11:54:32 by sataskin         ###   ########.fr       */
+/*   Created: 2023/11/14 17:30:39 by sataskin          #+#    #+#             */
+/*   Updated: 2023/11/15 14:22:54 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* This functions allocates a specified amount of memory and initializes
-it to zero using ft_bzero. by doing this the user can cast a specified types
-space. size can be sizeof(char), etc. */
-
-void	*ft_calloc(size_t nmemb, size_t size)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	void	*str;
+	t_list	*temp;
+	void	*cont;
+	t_list	*loc;
 
-	str = malloc(nmemb * size);
-	if (!str)
+	if (!lst || !(f) || !(del))
 		return (0);
-	str = ft_bzero(str, nmemb * size);
-	return (str);
+	loc = NULL;
+	while (lst)
+	{
+		cont = f(lst->content);
+		temp = ft_lstnew(cont);
+		if (!temp)
+		{
+			del(cont);
+			ft_lstclear(&loc, del);
+			return (0);
+		}
+		ft_lstadd_back(&loc, temp);
+		lst = lst->next;
+	}
+	return (loc);
 }

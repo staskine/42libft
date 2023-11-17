@@ -6,9 +6,12 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 12:34:04 by sataskin          #+#    #+#             */
-/*   Updated: 2023/10/30 17:19:18 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:56:00 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* This functions checks if c is a value that fits into the ASCII
+character set */
 
 int	ft_isascii(int c)
 {
