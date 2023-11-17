@@ -6,12 +6,16 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:04:32 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/07 11:58:15 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:44:13 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
+/*This functions trims the string s1 and returns a new string. It copies 
+the s1 into a new string excluding all characters found at the front and 
+back of the string containing anything from the string set. If string 
+only has characters from set it returns an empty string */
 
 static int	ft_isset(char c, char const *set)
 {

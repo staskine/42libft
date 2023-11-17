@@ -6,11 +6,11 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 16:22:18 by sataskin          #+#    #+#             */
-/*   Updated: 2023/10/30 17:19:43 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:46:11 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* Makes letters from upper to lower case */
 
 int	ft_toupper(int c)
 {

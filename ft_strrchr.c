@@ -6,11 +6,14 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:17:29 by sataskin          #+#    #+#             */
-/*   Updated: 2023/10/30 17:19:38 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:42:23 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* This function looks for the last instance of char c in string str and
+returns the location or NULL if not found */
 
 char	*ft_strrchr(const char *str, int c)
 {
