@@ -12,8 +12,7 @@
 
 #include "libft.h"
 
-/* This function copies the real strlcat behaviour. I personally find this
-function terrible and unusable but I had to make it */
+/* This function copies the real strlcat behaviour. */
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
